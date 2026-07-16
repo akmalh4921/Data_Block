@@ -9,6 +9,6 @@ data "azurerm_subnet" "data_subnet" {
 data "azurerm_public_ip" "data_pip" {
   for_each = var.nics
 
-  name                = each.value.name
+  name                = each.value.pip_name
   resource_group_name = each.value.resource_group_name
 }
